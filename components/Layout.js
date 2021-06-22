@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 
 export default function Layout(props) {
   return (
-    <div>
+    <div className='font-body'>
       <Head>
         <title>
           Free Stock Charts, Stock Quotes and Trade Ideas — TradingView
