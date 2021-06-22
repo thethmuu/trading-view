@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 
 export default function Layout(props) {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2'>
+    <div>
       <Head>
         <title>
           Free Stock Charts, Stock Quotes and Trade Ideas — TradingView
@@ -18,11 +18,11 @@ export default function Layout(props) {
       <Header />
 
       {/* main content */}
-      <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center'>
+      {/* <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center text-gray-900'>
         {props.children}
-      </main>
+      </main> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
