@@ -18,9 +18,9 @@ export default function Layout(props) {
       <Header />
 
       {/* main content */}
-      {/* <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center text-gray-900'>
+      <main className='text-gray-900'>
         {props.children}
-      </main> */}
+      </main>
 
       {/* <Footer /> */}
     </div>
