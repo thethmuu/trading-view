@@ -23,7 +23,7 @@ export default function Home({ charts }) {
       {/* Feed section */}
       <div className='lg:container mx-auto px-2 lg:px-32'>
         <div className='flex flex-col lg:flex-row my-12'>
-          <div className='flex-1'>
+          <div className='flex-1 px-0 lg:px-3'>
             <div className='mb-6'>
               <h2 className='text-3xl text-black'>
                 <a href='#' className='flex items-baseline group'>
@@ -40,7 +40,30 @@ export default function Home({ charts }) {
             {charts &&
               charts.map((chart) => <ChartItem key={chart.id} chart={chart} />)}
           </div>
-          <div className='flex-1'>Markets</div>
+          <div className='flex-1 px-0 lg:px-3'>
+            {/* Symbols */}
+            <div className='mb-6'>
+              <h2 className='text-3xl text-black'>
+                <a href='#' className='flex items-baseline group'>
+                  <span className='group-hover:text-blue-600'>
+                    Market Summary
+                  </span>
+                  <span className='ml-2 group-hover:text-blue-600'>
+                    <RightIcon />
+                  </span>
+                </a>
+              </h2>
+            </div>
+
+            {/* News */}
+            <div className='mb-6'>
+              <h2 className='text-3xl text-black'>
+                <a href='#' className='flex items-baseline hover:text-blue-600'>
+                  News
+                </a>
+              </h2>
+            </div>
+          </div>
         </div>
       </div>
     </>
@@ -50,8 +73,6 @@ export default function Home({ charts }) {
 export async function getServerSideProps() {
   const res = await fetch(`${API_URL}/charts`);
   const charts = await res.json();
-
-  console.log(charts);
 
   return {
     props: {

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 
 export default function ChartItem({ chart }) {
-  const { title, description, image } = chart;
+  const { title, description, image, user, date } = chart;
+
   return (
     <>
       {/* card */}
@@ -25,6 +26,22 @@ export default function ChartItem({ chart }) {
             height={254}
             width={500}
           />
+        </div>
+        {/* author */}
+        <div className='flex justify-between items-center mb-4'>
+          <span className='flex items-center truncate text-base '>
+            <Image
+              src='/images/author.png'
+              width={28}
+              height={28}
+              className='rounded'
+            />
+
+            <a href='#' className='ml-2'>
+              {user.username}
+            </a>
+          </span>
+          <span className='text-gray-500'>{new Date(date).toDateString()}</span>
         </div>
         {/* description */}
         <p>{description.substr(0, 280)}...</p>
