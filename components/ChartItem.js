@@ -6,12 +6,12 @@ export default function ChartItem({ chart }) {
     <>
       {/* card */}
       <div className='flex flex-col min-h-[520px] border p-5 mb-5 text-sm rounded shadow-sm'>
-        <a href='#' className='text-2xl font-semibold'>
+        <a href='#' className='text-2xl font-semibold hover:text-blue-600'>
           {title}
         </a>
         {/* info row */}
         <div className='flex items-center text-base mt-3'>
-          <a href='#' className='inline-block truncate'>
+          <a href='#' className='inline-block truncate hover:text-blue-600'>
             BTCUSD
           </a>
           <span>,</span>
@@ -27,7 +27,7 @@ export default function ChartItem({ chart }) {
           />
         </div>
         {/* description */}
-        <p>{description.substr(0, 200)}...</p>
+        <p>{description.substr(0, 280)}...</p>
       </div>
     </>
   );

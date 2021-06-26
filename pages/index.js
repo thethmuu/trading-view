@@ -1,5 +1,6 @@
 import ChartItem from '@/components/ChartItem';
 import { API_URL } from '@/config/index';
+import RightIcon from '@/components/icons/RightIcon';
 
 export default function Home({ charts }) {
   return (
@@ -21,11 +22,18 @@ export default function Home({ charts }) {
 
       {/* Feed section */}
       <div className='lg:container mx-auto px-2 lg:px-32'>
-        <div className='flex my-12'>
+        <div className='flex flex-col lg:flex-row my-12'>
           <div className='flex-1'>
             <div className='mb-6'>
               <h2 className='text-3xl text-black'>
-                <a href='#'>Editor's Pick</a>
+                <a href='#' className='flex items-baseline group'>
+                  <span className='group-hover:text-blue-600'>
+                    Editor's picks
+                  </span>
+                  <span className='ml-2 group-hover:text-blue-600'>
+                    <RightIcon />
+                  </span>
+                </a>
               </h2>
             </div>
             {/* cards container */}

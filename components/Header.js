@@ -11,14 +11,14 @@ export default function Header() {
     <header className='border-b text-gray-800'>
       <div className='lg:container mx-auto px-2 lg:px-32'>
         {/* header top */}
-        <div className='flex justify-between items-center bg-white text-sm mt-1 sticky top-0'>
+        <div className='flex justify-between items-center bg-white text-sm sticky top-0'>
           <a href='/' className='flex items-center py-3 px-6 hover:bg-blue-50'>
             <span className='mr-1'>
               <LogoIcon />
             </span>
             <span>TradingView</span>
           </a>
-          <div className='flex items-center'>
+          <div className='lg:flex items-center hidden'>
             <span className='flex items-center pl-4 py-1 rounded-tl rounded-bl bg-blue-50'>
               Launch chart
               <DownIcon />
