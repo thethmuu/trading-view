@@ -3,6 +3,7 @@ import LogoIcon from './icons/LogoIcon';
 import ChartIcon from './icons/ChartIcon';
 import DownIcon from './icons/DownIcon';
 import SearchIcon from './icons/SearchIcon';
+import Link from 'next/link';
 
 export default function Header() {
   const navLinks = ['Trade', 'Markets', 'Screeners', 'Community', 'More'];
@@ -12,12 +13,16 @@ export default function Header() {
       <div className='lg:container mx-auto px-2 lg:px-32'>
         {/* header top */}
         <div className='flex justify-between items-center bg-white text-sm sticky top-0'>
-          <a href='/' className='flex items-center py-3 px-6 hover:bg-blue-50'>
-            <span className='mr-1'>
-              <LogoIcon />
-            </span>
-            <span>TradingView</span>
-          </a>
+          <Link
+            href='/'
+          >
+            <a className='flex items-center py-3 px-6 hover:bg-blue-50'>
+              <span className='mr-1'>
+                <LogoIcon />
+              </span>
+              <span>TradingView</span>
+            </a>
+          </Link>
           <div className='lg:flex items-center hidden'>
             <span className='flex items-center pl-4 py-1 rounded-tl rounded-bl bg-blue-50'>
               Launch chart
@@ -25,7 +30,10 @@ export default function Header() {
             </span>
             <span className='text-gray-500 flex items-center ml-1 px-2 py-1 rounded-tr rounded-br bg-blue-50'>
               <SearchIcon />
-              <input className='w-80 bg-blue-50 outline-none pl-1 py-1' placeholder='Symbol, eg. APPL' />
+              <input
+                className='w-80 bg-blue-50 outline-none pl-1 py-1'
+                placeholder='Symbol, eg. APPL'
+              />
             </span>
           </div>
           <div className='flex items-center'>
@@ -53,10 +61,7 @@ export default function Header() {
             </li>
             {navLinks.map((link) => (
               <li key={link}>
-                <a
-                  href='#'
-                  className='py-3 px-6 inline-block hover:bg-blue-50'
-                >
+                <a href='#' className='py-3 px-6 inline-block hover:bg-blue-50'>
                   {link}
                 </a>
               </li>

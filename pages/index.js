@@ -1,8 +1,9 @@
 import ChartItem from '@/components/ChartItem';
+import SymbolItem from '@/components/SymbolItem';
 import { API_URL } from '@/config/index';
 import RightIcon from '@/components/icons/RightIcon';
 
-export default function Home({ charts }) {
+export default function Home({ charts, symbols }) {
   return (
     <>
       {/* unauth header */}
@@ -42,17 +43,26 @@ export default function Home({ charts }) {
           </div>
           <div className='flex-1 px-0 lg:px-3'>
             {/* Symbols */}
-            <div className='mb-6'>
-              <h2 className='text-3xl text-black'>
-                <a href='#' className='flex items-baseline group'>
-                  <span className='group-hover:text-blue-600'>
-                    Market Summary
-                  </span>
-                  <span className='ml-2 group-hover:text-blue-600'>
-                    <RightIcon />
-                  </span>
-                </a>
-              </h2>
+            <div>
+              <div className='mb-6'>
+                <h2 className='text-3xl text-black'>
+                  <a href='#' className='flex items-baseline group'>
+                    <span className='group-hover:text-blue-600'>
+                      Market Summary
+                    </span>
+                    <span className='ml-2 group-hover:text-blue-600'>
+                      <RightIcon />
+                    </span>
+                  </a>
+                </h2>
+              </div>
+              {/* Symbol items container */}
+              <div className='px-3'>
+                {symbols &&
+                  symbols.map((symbol) => (
+                    <SymbolItem key={symbol.id} symbol={symbol} />
+                  ))}
+              </div>
             </div>
 
             {/* News */}
@@ -71,12 +81,16 @@ export default function Home({ charts }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${API_URL}/charts`);
-  const charts = await res.json();
+  const chartRes = await fetch(`${API_URL}/charts`);
+  const charts = await chartRes.json();
+
+  const symbolRes = await fetch(`${API_URL}/symbols`);
+  const symbols = await symbolRes.json();
 
   return {
     props: {
-      charts
+      charts,
+      symbols
     }
   };
 }
