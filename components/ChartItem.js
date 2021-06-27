@@ -37,7 +37,7 @@ export default function ChartItem({ chart }) {
               className='rounded'
             />
 
-            <a href='#' className='ml-2'>
+            <a href='#' className='ml-2 hover:text-blue-600'>
               {user.username}
             </a>
           </span>
