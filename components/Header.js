@@ -43,7 +43,7 @@ export default function Header() {
 
             <a
               href='#'
-              className='hidden lg:block ml-3 px-5 py-1 bg-blue-600 hover:bg-blue-500 focus:ring text-base text-white rounded'
+              className='hidden xl:block ml-3 px-5 py-1 bg-blue-600 hover:bg-blue-500 focus:ring text-base text-white rounded'
             >
               Start free trial
             </a>

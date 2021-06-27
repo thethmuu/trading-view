@@ -27,7 +27,7 @@ export default function Home({ charts, symbols, articles }) {
         <div className='flex flex-col lg:flex-row my-12'>
           <div className='flex-1 px-0 lg:px-3'>
             <div className='mb-6'>
-              <h2 className='text-3xl text-black'>
+              <h2 className='text-2xl lg:text-3xl text-black'>
                 <a href='#' className='flex items-baseline group'>
                   <span className='group-hover:text-blue-600'>
                     Editor's picks
@@ -46,7 +46,7 @@ export default function Home({ charts, symbols, articles }) {
             {/* Symbols */}
             <div className='mb-5'>
               <div className='mb-6'>
-                <h2 className='text-3xl text-black lg:px-2'>
+                <h2 className='text-2xl lg:text-3xl text-black lg:px-2'>
                   <a href='#' className='flex items-baseline group'>
                     <span className='group-hover:text-blue-600'>
                       Market Summary
@@ -69,7 +69,7 @@ export default function Home({ charts, symbols, articles }) {
             {/* News */}
             <div>
               <div className='mb-6'>
-                <h2 className='text-3xl text-black lg:px-2'>
+                <h2 className='text-2xl lg:text-3xl text-black lg:px-2'>
                   <a
                     href='#'
                     className='flex items-baseline hover:text-blue-600'
