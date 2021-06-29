@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 
 export default function Layout(props) {
@@ -21,8 +20,6 @@ export default function Layout(props) {
       <main className='text-gray-900'>
         {props.children}
       </main>
-
-      {/* <Footer /> */}
     </div>
   );
 }

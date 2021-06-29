@@ -10,7 +10,7 @@ export default function ArticleItem({ article }) {
         </span>
       </div>
       <div>
-        <h3 className='text-gray-800 font-semibold'>{title}</h3>
+        <a href='#' className='text-gray-800 hover:text-blue-600 font-semibold cursor-pointer'>{title}</a>
         <p className='text-gray-500 text-sm'>{description.substr(0, 100)}...</p>
       </div>
     </div>
